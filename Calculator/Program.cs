@@ -1,4 +1,4 @@
-﻿int firstNumber, secondNumber, result;
+﻿int firstNumber, secondNumber;
 String operation;
 
 Console.WriteLine("Hello!");
@@ -11,17 +11,20 @@ Console.WriteLine("[A]dd");
 Console.WriteLine("[S]ubstract");
 Console.WriteLine("[M]ultiply");
 operation = Console.ReadLine();
-if (operation == "a" || operation == "A")
+if (EqualsCaseInsensitive(operation, "A"))
 {
-    Console.WriteLine(firstNumber + " + " + secondNumber + " = " + Add(firstNumber, secondNumber));
+    var sum = firstNumber + secondNumber;
+    PrintFinalEquation(firstNumber, secondNumber, sum, "+");
 }
-else if (operation == "s" || operation == "S")
+else if (EqualsCaseInsensitive(operation, "S"))
 {
-     Console.WriteLine(firstNumber + " - " + secondNumber + " = " + Substract(firstNumber, secondNumber));
+    var difference = firstNumber - secondNumber;
+    PrintFinalEquation(firstNumber, secondNumber, difference, "-");
 }
-else if (operation == "M" || operation == "m")
+else if (EqualsCaseInsensitive(operation, "M"))
 {
-    Console.WriteLine(firstNumber + " * " + secondNumber + " = " + Multiply(firstNumber, secondNumber));
+    var multiplied = firstNumber * secondNumber;
+    PrintFinalEquation(firstNumber, secondNumber, multiplied, "*");
 }
 else
 {
@@ -30,16 +33,13 @@ else
 Console.WriteLine("Press any key to close");
 Console.ReadKey();
 
-    int Add(int firstNumber, int secondNumber)
-    {
-        return firstNumber + secondNumber;
-    }
-
-int Substract(int firstNumber, int secondNumber)
+void PrintFinalEquation(int firstNumber, int secondNumber, int result, string @operator)
 {
-    return firstNumber - secondNumber;
+    Console.WriteLine(
+        firstNumber + " " + @operator + " " + secondNumber + " = " + result);
 }
-int Multiply(int firstNumber, int secondNumber)
+
+bool EqualsCaseInsensitive(string left, string right)
 {
-    return firstNumber * secondNumber;
+    return left.ToUpper() == right.ToUpper();
 }
