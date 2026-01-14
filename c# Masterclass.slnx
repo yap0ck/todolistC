@@ -1,4 +1,5 @@
 <Solution>
   <Project Path="Calculator/Calculator.csproj" Id="194d692d-4f9c-4d05-8c2c-80e9ed68bd06" />
+  <Project Path="Dice Roll Game/Dice Roll Game.csproj" Id="edbc5090-706e-4a6f-a740-da650d3189b7" />
   <Project Path="ToDoList/ToDoList.csproj" />
 </Solution>
