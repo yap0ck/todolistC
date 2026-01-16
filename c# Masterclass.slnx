@@ -3,5 +3,6 @@
   <Project Path="CookieCookbook/CookieCookbook.csproj" Id="a6344b42-8b0b-4f81-9dff-45de2f16689e" />
   <Project Path="Dice Roll Game/Dice Roll Game.csproj" Id="edbc5090-706e-4a6f-a740-da650d3189b7" />
   <Project Path="Exercices/Exercices.csproj" Id="1aba0b98-f807-4d9d-9d01-d49fba0cee9f" />
+  <Project Path="GameDataParser/GameDataParser.csproj" Id="c2227403-240f-4d36-bbc1-943710cc040f" />
   <Project Path="ToDoList/ToDoList.csproj" />
 </Solution>
